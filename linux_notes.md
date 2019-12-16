@@ -1,17 +1,23 @@
 # Some Useful Tricks for Linux
 
-## 1.Nvidia GPU driver, CUDA and cnDNN
+## 1.Nvidia GPU driver, CUDA and cnDNN, openCV
 
 用途： 使用GPU加速Deep Learning计算； CUDA加速...
 
-必须三者都安装后，才能使用GPU来加速TensorFlow, Torch/PyTorch等DL框架
+必须都安装前三者后，才能使用GPU来加速TensorFlow, Torch/PyTorch等DL框架
+
+### 0. 推荐的版本（均已测试）
+
+* ubuntu 14.04+1080ti
+
+    CUDA8.0(.deb方式安装), cudnn v5, openCV 2.4.13. 注意：在cmake opencv的源文件时，需要加上相应参数
 
 ### 1.1 先安装Nvidia GPU driver
 
 * 安装方法：
 
     一般直接使用Ubuntu中Software&Update里面的Nvidia驱动。否则，需要手动安装（网上找教程吧）。测试成功的例子：
-    >* i7-7700+1080ti台式机：ubuntu16.04， nvidia driver 384.130
+    >* i7-7700+1080ti台式机：ubuntu16.04/14.04， nvidia driver 384.130
     >* i7-9750H+GTX1650笔记本(dell-7950):ubuntu18.04, nvidia driver 440.33或430
 
     注：最好选常用的显卡，比如1080ti等。 GTX1650在ubuntu16.04中很难安装驱动，尝试了无数次后放弃，故选择ubuntu18.04
@@ -45,7 +51,7 @@
 
     [官网](https://developer.nvidia.com/cuda-toolkit-archive)下载安装文件
     >* deb(local)文件: 在安装CUDA的同时，会自动下载、安装最新显卡驱动。缺点：安装的显卡驱动有时和系统不兼容，需要自行修复
-    >* runfile(local，.run文件)：可以选择不安装显卡驱动
+    >* runfile(local，.run文件)：可以选择不安装显卡驱动。需要先关闭xserver,比较麻烦，因此不太建议使用
 
     ubuntu16.04建议安装cuda9.0
 * 安装
@@ -100,7 +106,7 @@
 
 * 卸载（还没有较好的办法）
 
-    `sudo rm -rf /usr/local/cuda /usr/local/cuda-10.2`
+    `sudo rm -rf /usr/local/cuda`
 
  * * *
 
