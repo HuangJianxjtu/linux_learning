@@ -5,7 +5,7 @@ BUG:安装NVIDIA显卡驱动总是失败(GTX 1650)
 
 ## 1.搜狗中文输入法
 
-  >* (1)install sougou package(sogoupinyin_2.2.0.0108_amd64.deb);
+  >* (1)install sougou package,官网;
   >* (2)打开System Setting,找到Language Support，install简体中文;"apply system-wide";将键盘输入法系统由默认的iBus改成fcitx;
   >* (3)reboot;
   >* (4)点击右上角输入法小图标,选择config，去掉勾，点击左下角小加号，找到Sogou Pinyin添加即可
