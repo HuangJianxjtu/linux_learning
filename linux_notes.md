@@ -56,3 +56,12 @@
 * ftp
 
 传输数据快，适合大文件传输。通常用来做网盘，[待尝试](https://www.cnblogs.com/hexige/p/7809481.html)
+
+
+sudo apt install /path/to/package/name.deb
+
+默认：
+对整个屏幕截图： PrintScreen
+对活动窗口截图： Alt+PrintScreen
+对任意矩形截图： Shift+PrintScreen
+以上三个快捷键再加上Ctrl，就会默认复制截图到粘贴板

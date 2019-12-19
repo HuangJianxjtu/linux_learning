@@ -6,9 +6,9 @@
 
 必须都安装前三者后，才能使用GPU来加速TensorFlow, Torch/PyTorch等DL框架
 
-### 0. 推荐的版本（均已测试）
+### 1.1 推荐的版本（均已测试）
 
-* ubuntu 14.04+1080ti
+* ubuntu 14.04+1080ti台式机
 
     CUDA 8.0(.deb方式安装), cudnn v5, openCV 2.4.13
 
@@ -16,21 +16,27 @@
 
 * ubuntu 18.04+1650(Dell-inpiration-7590 laptop)
 
-    CUDA 10.2(.deb方式安装,会自动安装nvidia driver440.33), cudnn v7.6.5, openCV 3.4.8
+ >>* CUDA_10.2 + nvidia_driver_440.33(.deb方式安装), cudnn v7.6.5, openCV 3.4.8
+ >>* 安装较为容易
 
-     **注意**：CUDA 10以上安装Torch时,需要用[这个仓库](https://github.com/nagadomi/distro)，不要用[官方的](http://torch.ch/docs/getting-started.html#_)
+* ubuntu 16.04+1650(Dell-inpiration-7590 laptop)
 
-     **BUG**: Torch的cunn装不上
-
+ >>* CUDA_10.1.168 + nvidia_driver_418.67(.deb方式安装), cudnn v7.6.4, openCV 3.4.8
+ >>* 安装非常麻烦。上面几乎是唯一安装成功的版本！
+  
 ### 1.1 安装Nvidia GPU driver(如果使用.deb文件安装cuda，则可跳过这一步)
 
-* 安装方法：
+* 一般的安装方法：
 
     一般直接使用Ubuntu中Software&Update里面的Nvidia驱动。否则，需要手动安装（网上找教程吧）。测试成功的例子：
   * i7-7700+1080ti台式机：ubuntu16.04/14.04， nvidia driver 384.130
   * i7-9750H+GTX1650笔记本(dell-7950):ubuntu18.04, nvidia driver 440.33或430
 
-    注：最好选常用的显卡，比如1080ti等。 GTX1650在ubuntu16.04中很难安装驱动，尝试了无数次后放弃，故选择ubuntu18.04
+    注：最好选常用的显卡，比如1080ti等
+
+* PPA方式安装
+
+  参考[此文](https://blog.csdn.net/L_Y_Fei/article/details/101113785)
 
 * 测试Nvidia GPU driver是否安装成功
 
@@ -43,9 +49,8 @@
     sudo prime-select nvidia # 切换到nvidia显卡
     sudo prime-select intel  # 切换到intel显卡
     sudo prime-select query  # 查看当前使用的显卡
+    sudo reboot
     ```
-
-    reboot
 
 * nvidia显卡使用情况查看
 
@@ -53,8 +58,8 @@
 
 * 卸载nvidia显卡驱动（特别是在无法进入图形界面时）
 
-  * Crtl + Alt + F3， 进入tty命令行模式
-  * sudo apt-get purge nvidia-*
+  * Crtl + Alt + F1， 进入tty命令行模式
+  * `sudo apt-get purge nvidia-*`
 
  * * *
 
@@ -66,21 +71,41 @@
   * deb(local)文件: 在安装CUDA的同时，会自动下载、安装最新显卡驱动。缺点：安装的显卡驱动有时和系统不兼容，需要自行修复
   * runfile(local，.run文件, **不推荐**)：可以选择不安装显卡驱动。需要先关闭xserver,比较麻烦，因此不太建议使用
 
-* 安装
+* .deb方式安装
 
-    ```bash
-    # .deb文件安装
-    sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
-    sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
-    sudo apt-get update
-    sudo apt-get install cuda
+>>* 禁用nouveau模块
 
-    # .run文件安装
-    sudo sh cuda_9.0.176_384.81_linux.run
-    # Follow the command-line prompts
-    ```
+`sudo gedit /etc/modprobe.d/blacklist.conf`
 
-    重启电脑，看看是否能正常进入图形界面。若不能需要进入tty模式，卸载cuda，并重试
+在末尾加入
+
+```txt
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist rivatv
+blacklist nvidiafb
+```
+
+`sudo update-initramfs -u`
+
+>>* 重启。
+
+通过`Crtl + Alt + F1`， 进入tty命令行模式（返回桌面：`Ctrl + Alt + F7`）。
+通过`lsmod | grep nouveau`查看是否在用nouveau驱动, 如果没有任何返回则说明没有使用。运行：
+
+```bash
+sudo service lightdm stop # 关闭桌面管理器lightdm
+# 进入.deb安装文件所在的文件夹
+sudo dpkg -i cuda-repo-ubuntu1604-***.deb
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+sudo service lightdm start # 开启桌面管理器lightdm
+sudo reboot
+```
+
+看看是否能正常进入图形界面。若不能需要进入tty模式，卸载cuda，重试
 
 * 测试
 
