@@ -139,7 +139,7 @@ sudo apt remove onboard deja-dup
 * [ ] minimap
 * [x] auto save  # 0.1s
   
->* 好的插件:C/C++, C++ Intellisense, CMake, CMake Tools, cmake-format, Code Runner, Markdown All in One, markdownlint, Python, ROS, XML
+>* 好的插件:C/C++, C++ Intellisense, CMake, CMake Tools, cmake-format, Code Runner, Markdown All in One, markdownlint, Python, ROS, XML, Remote SSH
 
 ## OpenCV
 
