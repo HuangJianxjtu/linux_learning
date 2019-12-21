@@ -50,15 +50,30 @@
 
    `sudo apt-get install zsh`
 
+  >* 将默认终端由bash换成zsh
+
+  `chsh -s /bin/zsh   #注意：不要使用sudo`
+
   >* 安装oh-my-zsh 项目来帮我们配置 zsh，采用wget安装：
 
   `wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh`
 
-  >* 将终端由bash换成zsh
+  >* 安装zsh-syntax-highlighting语法高亮插件
 
-在~/.bashrc的最后一行写上zsh（同理，如果要从zsh切换到bash,就在~/.bashrc中去掉zsh）
+  ```bash
+  cd /usr/share/
+  sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+  echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+  source ~/.zshrc
+  ```
 
-`source ~/.bashrc`
+  >* 安装zsh-autosuggestions语法历史记录插件(自动补全插件)
+
+  ```bash
+  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  echo "source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+  source ~/.zshrc
+  ```
 
   >* 修改透明度为10%
   >* 命令行自动提示：没多大用，用Tab即可
