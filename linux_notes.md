@@ -37,6 +37,14 @@
 
     在linux中，如果不写端口号，则默认是22
 
+* ssh免密登录
+  
+  `ssh-copy-id -i ~/.ssh/id_dsa.pub _USER_@__IP__`
+
+* ssh多级跳转
+
+  即:A通过ssh登录B, 再通过ssh登录C. [参考](https://blog.csdn.net/CityzenOldwang/article/details/77097703)
+
 ### 1.2 图形界面连接
 
 推荐使用Teamviewer,不推荐VNC

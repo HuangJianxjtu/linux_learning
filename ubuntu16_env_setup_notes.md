@@ -44,7 +44,7 @@
 
 ## 更换Terminal(optional)
 
-终端采用zsh和oh-my-zsh，既美观又简单易用，主要是能提高你的逼格！！！
+终端采用zsh和oh-my-zsh，既美观又简单易用，主要是能提高你的逼格！！！ZSH, also called the Z shell
 
   >* 首先，安装zsh：
 
