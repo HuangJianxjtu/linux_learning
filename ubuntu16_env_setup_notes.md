@@ -16,22 +16,22 @@
   >* 打开System Setting,找到Language Support，install简体中文;"apply system-wide";将键盘输入法系统由默认的iBus改成fcitx;
   >* `sudo reboot`
   >* (4)点击右上角输入法小图标,选择config，去掉勾，点击左下角小加号，找到Sogou Pinyin添加即可
-  >* 若在菜单栏的右上角出现两个输入法图标，则：`sudo apt-get remove fcitx-ui-qimpanel`;再重启
+  >* 若在菜单栏的右上角出现两个输入法图标，则：`sudo apt remove fcitx-ui-qimpanel`;再重启
   >* 搜狗拼音的简体、繁体相互转换：Ctrl+Shift+F
 
 ## system monitor
 
   >* `sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor`
-  >* `sudo apt-get update`
-  >* `sudo apt-get install indicator-sysmonitor`
+  >* `sudo apt update`
+  >* `sudo apt install indicator-sysmonitor`
 
 启动，右击设置"Run on startup"
 
 ## Shadowsocks(optional)
 
   >* `sudo add-apt-repository ppa:hzwhuang/ss-qt5`
-  >* `sudo apt-get update`
-  >* `sudo apt-get install shadowsocks-qt5`
+  >* `sudo apt update`
+  >* `sudo apt install shadowsocks-qt5`
   >* 在Startup Application里面设置shadowsocks开机自动启动
 
 ## Google Chrome
@@ -42,13 +42,13 @@
   >* 插件1：Adblock Plus的设置
   >* 插件2：SwitchyOmega auto-switch的设置：github上已经保存了设置文件
 
-## 更换Terminal(optional)
+## 更换Terminal
 
 终端采用zsh和oh-my-zsh，既美观又简单易用，主要是能提高你的逼格！！！ZSH, also called the Z shell
 
   >* 首先，安装zsh：
 
-   `sudo apt-get install zsh`
+   `sudo apt install zsh`
 
   >* 将默认终端由bash换成zsh
 
@@ -82,30 +82,30 @@
 
   >* 先安装unity-tweak-tool
 
-`sudo apt-get install unity-tweak-tool`
+`sudo apt install unity-tweak-tool`
 
   >* 安装Flatabulous主题
 
 ```bash
 sudo add-apt-repository ppa:noobslab/themes
-sudo apt-get update
-sudo apt-get install flatabulous-theme
+sudo apt update
+sudo apt install flatabulous-theme
 ```
 
   >* 安装扁平化的图标
 
 ```bash
 sudo add-apt-repository ppa:noobslab/icons
-sudo apt-get update
-sudo apt-get install ultra-flat-icons
+sudo apt update
+sudo apt install ultra-flat-icons
 ```
 
-  >* 安装完成后，打开unity-tweak-tool软件.修改主题为Flatabulous,修改图标为Ultra-flat
+  >* 安装完成后，打开unity-tweak-tool软件.修改theme为Flatabulous,修改icon为Ultra-flat
 
 ## 安装docky(optional)
 
-  >* `sudo apt-get install docky`
-  >* 卸载：`sudo apt-get remove docky`
+  >* `sudo apt install docky`
+  >* 卸载：`sudo apt remove docky`
   >* [参考博客](https://www.jianshu.com/p/4bd2d9b1af41)
   >* 小技巧：如果想要删除docky上的图标(除了docky本身)，直接用鼠标将其拖出即可；此外，如果要将一个图标添加到docky,只需要打开这个软件，再在docky上右击，选择"pin to dock"
   >* 也可以使用cairo-dock，会玩的话, 足以媲美macOS自带的dock.缺点是不能正常显示一些软件的图标，如VSCode,需要手动设置
