@@ -4,7 +4,7 @@
 
 用途： 使用GPU加速Deep Learning计算； CUDA加速...
 
-必须都安装前三者后，才能使用GPU来加速TensorFlow, Torch/PyTorch等DL框架
+必须都安装前三者后，才能使用GPU来加速TensorFlow, PyTorch/Torch等DL框架
 
 ### 1.1 推荐的版本（均已测试）
 
@@ -183,3 +183,9 @@ sudo reboot
     若删除cuda，cuDNN也会被跟着删除的
 
  * * *
+
+## 2. Anaconda
+
+推荐使用anaconda来维护编程环境，比较方便。anaconda自动安装了jupyter noteboook. 但注意anaconda可能会跟ROS环境冲突。
+
+**安装anaconda(.sh文件)时，不要使用sudo**

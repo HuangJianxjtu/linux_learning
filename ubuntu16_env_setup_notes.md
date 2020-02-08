@@ -186,6 +186,14 @@ wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo 
   ls model.tar.g* | xargs -n1 tar xzvf
   ```
 
+   >* Pycharm中无法识别rospy的包
+
+    sudo gedit /usr/share/applications/jetbrains-pycharm.desktop
+
+    修改Exec变量一行，在=后添加 bash -i -c
+
+    在pycharm中，把/opt/ros/kinetic/lib/python2.7/dist-packages加入interpreter Paths
+
 ## 其他
 
   >* ubuntu下好用的视频播放器：smplayer
