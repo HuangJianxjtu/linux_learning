@@ -9,15 +9,15 @@
     server即我们要远程控制的电脑。确认开启ssh server服务
 
     ```bash
-    systemctl status sssd.service   # for ubuntu 16.0+ or centos 7+, which  based on systemctl
+    systemctl status sshd.service   # for ubuntu 16.0+ or centos 7+, which  based on systemctl
     service ssh status  # for ubuntu 14.04
     ```
 
     若显示没有这个service, 则需安装ssh-server:
 
     ```bash
-    sudo apt-get update
-    sudo apt-get install openssh-server
+    sudo apt update
+    sudo apt install openssh-server
     sudo service ssh restart    # 重启ssh服务, for ubuntu 14.04
     sudo systemctl start sshd    # 重启ssh服务, for ubuntu 16.04+
     ```
