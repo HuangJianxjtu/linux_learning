@@ -194,6 +194,11 @@ wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo 
 
     在pycharm中，把/opt/ros/kinetic/lib/python2.7/dist-packages加入interpreter Paths
 
+  >* Pycharm for ROS
+
+  [reference](https://hepeng.me/how-to-use-pycharm-to-debug-on-ros/)
+
+
 ## 其他
 
   >* ubuntu下好用的视频播放器：smplayer
