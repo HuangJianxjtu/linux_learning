@@ -30,6 +30,7 @@
   * 使用[ngrok](https://dashboard.ngrok.com/get-started),用github账号登陆，可以得到random的公网地址。启动ngrok:
     `$./ngrok tcp 22`
   * 用阿里云，自己搭建ngrok服务器，[参考1](https://www.zhihu.com/question/27771692),[参考2](https://www.jianshu.com/p/d35962b0dba4)
+  * zerotier
 
 * client端
 
@@ -122,3 +123,16 @@ xdg-open命令会根据系统的默认打开方式打开一个文件，比如图
   [Install]  
   WantedBy=multi-user.target
   ```
+
+## 7. 命令行后台运行程序 -- nohup &
+
+用法：
+
+```
+nohup [YOUR_COMMAND] &
+```
+
+NOTE: nohup命令执行后，不要直接关闭终端，使用exit命令退出会话.否则会出现nohup不起作用的情况！
+
+[如何终止正在后台运行的程序](https://blog.csdn.net/qq_29663071/article/details/81030396)
+
