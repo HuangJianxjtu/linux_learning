@@ -58,6 +58,8 @@
 
   `wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh`
 
+  但在国内按上面的方法安装oh-my-zsh比较麻烦，请参考这篇[国内教程](https://blog.csdn.net/qwe641259875/article/details/107201760/)
+
   >* 安装zsh-syntax-highlighting语法高亮插件
 
   ```bash
