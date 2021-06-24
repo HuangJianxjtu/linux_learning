@@ -187,5 +187,46 @@ sudo reboot
 ## 2. Anaconda
 
 推荐使用anaconda来维护编程环境，比较方便。anaconda自动安装了jupyter noteboook. 但注意anaconda可能会跟ROS环境冲突。
+* 下载
 
-**安装anaconda(.sh文件)时，不要使用sudo**
+    可以用[清华源](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，也可以用[官方源](https://www.anaconda.com/products/individual)
+
+* **安装anaconda(.sh文件)时，不要使用sudo**
+
+    命令：`bash ***.sh`; 为了维护原来ROS的环境，不要让anaconda修改~/.bashrc 或者~/.zshrc
+    >* 使用该命令在终端中激活anacoda环境： `source ~/anaconda3/bin/activate`
+
+
+* 卸载
+
+    [官方教程](https://docs.continuum.io/anaconda/install/uninstall/)
+
+    删除~/annaconda文件夹；
+    删除~/.bashrc ~/.zshrc中关于annaconda的设置
+
+
+* 源
+>* 添加清华源
+
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+    
+
+>* 显示安装通道
+    `conda config --set show_channel_urls yes`
+>* 回复默认设置
+    `conda config --remove-key channels`
+
+
+## 3. Tensorflow
+
+注意有些程序需要在比较低版本的tensorflow上运行，下面是安装指定版本tensorflow的方法。如果不指定版本号，则默认安装最新版
+>* `conda create -n tf python=3.6`
+>* `source activate tf`
+>* `conda install tensorflow-gpu=1.14`
+
+* 测试是否安装成功
+
+    在Python中import tensorflow; 对于1.14版本，再测试slim = tensorflow.contrib.slim
+
+* python通过requirement文件安装环境，[链接](https://zhuanlan.zhihu.com/p/69058584)
