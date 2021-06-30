@@ -57,9 +57,10 @@ git clone https://gitee.com/han8gui/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-
 
 >* 修改透明度为10%
 
+## 设置git
+参考廖雪峰的[网站](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)
+
 ## 日常工具
 >* 下载工具transmission, ubuntu20.04自带
 >* 媒体播放器：Ubuntu自带或VLC
 >* VScode:登录账号后，自动同步配置
-
-
