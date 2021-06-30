@@ -1,0 +1,65 @@
+# Ubuntu20.04重装系统后的软件安装指南
+
+## 在“Software & Updates”中，修改软件源为科大源，更新
+
+## system monitor
+>* `sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor`
+>* `sudo apt update`
+>* `sudo apt install indicator-sysmonitor`
+>* 启动，右击设置"Run on startup"，添加network
+
+## 显卡驱动
+在“Software & Updates”的additional drivers安装即可，使用tested版本。安装后可能需要重启
+
+>* 解决关机慢、有光标闪烁问题，[参考](https://blog.csdn.net/X_T_S/article/details/110144658)。似乎是因为英伟达显卡驱动引起的
+
+## 中文输入法
+按照sougou for linux的官方教程安装即可
+
+## 科学上网
+>* 在software中安装qv2ray，并设置开机自动重启、自动连接；开机自动重启可能失效，此时需要手动添加到startup application中
+>* 从github下载v2ray core到qv2ray的默认路径，并通过检查。
+>* 添加自己的翻墙服务器
+
+## Google Chrome
+
+>* 翻墙后很容易安装
+
+## 更换Terminal
+
+终端采用zsh和oh-my-zsh，美观且功能强大！！！ZSH, also called the Z shell
+
+>* 首先，安装zsh：
+
+  `sudo apt install zsh`
+
+>* 将默认终端由bash换成zsh
+
+`chsh -s /bin/zsh   #注意：不要使用sudo`
+
+>* 安装oh-my-zsh 项目来帮我们配置 zsh，采用wget安装：
+
+ ```bash
+ cd ~/Downloads
+ wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh
+ chmod +x install.sh
+ ./install.sh
+ ```
+
+>* 安装语法高亮插件和自动补全插件
+
+```bash
+git clone https://gitee.com/lxgyChen/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone https://gitee.com/han8gui/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+再将~/.zshrc中的`plugins=(git)`改为`plugins=(git zsh-syntax-highlighting zsh-autosuggestions)`, 最后运行`source ~/.zshrc`
+
+>* 修改透明度为10%
+
+## 日常工具
+>* 下载工具transmission, ubuntu20.04自带
+>* 媒体播放器：Ubuntu自带或VLC
+>* VScode:登录账号后，自动同步配置
+
+
