@@ -64,3 +64,6 @@ git clone https://gitee.com/han8gui/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-
 >* 下载工具transmission, ubuntu20.04自带
 >* 媒体播放器：Ubuntu自带或VLC
 >* VScode:登录账号后，自动同步配置
+>* [ros清华源_Ubuntu20.04下安装ROS](https://blog.csdn.net/weixin_42525601/article/details/112198438)
+>* 安装CLion, 注意安装路径,[参考](https://blog.csdn.net/feimeng116/article/details/105898892); 使用CLion进行ROS编程，[参考](https://github.com/HuangJianxjtu/ros_learning/blob/master/env_setup/ros_IDE_env_setup.md)
+>* 安装PyCharm, 注意安装路径，参考CLion的安装；使用PyCharm进行ROS编程也参考CLion中的教程。但要注意解决[解决pycharm无法导入rospy](https://blog.csdn.net/weixin_44481159/article/details/112583202)，这篇文章有一处小毛病，就是noetic默认使用python3编程，找到相应文件路径即可。
