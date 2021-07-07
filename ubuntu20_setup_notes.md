@@ -1,5 +1,9 @@
 # Ubuntu20.04重装系统后的软件安装指南
 
+## 如何解决Ubuntu20.04与Windows系统时间不同步
+
+>* `timedatectl set-local-rtc true`
+
 ## 在“Software & Updates”中，修改软件源为科大源，更新
 
 ## system monitor
