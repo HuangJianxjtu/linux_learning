@@ -61,6 +61,9 @@ git clone https://gitee.com/han8gui/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-
 
 >* 修改透明度为10%
 
+>* 分屏工具teminator, `sudo apt install terminator`；在preference->profiles->general中，设置不显示titlebar；unfocused terminal font brightness设置成80%.
+
+
 ## 设置git
 参考廖雪峰的[网站](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)
 
