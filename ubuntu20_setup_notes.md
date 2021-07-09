@@ -75,4 +75,4 @@ git clone https://gitee.com/han8gui/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-
 >* 安装CLion, 注意安装路径,[参考](https://blog.csdn.net/feimeng116/article/details/105898892); 使用CLion进行ROS编程，[参考](https://github.com/HuangJianxjtu/ros_learning/blob/master/env_setup/ros_IDE_env_setup.md)
 >* 安装PyCharm, 注意安装路径，参考CLion的安装；使用PyCharm进行ROS编程也参考CLion中的教程。但要注意解决[解决pycharm无法导入rospy](https://blog.csdn.net/weixin_44481159/article/details/112583202)，这篇文章有一处小毛病，就是noetic默认使用python3编程，找到相应文件路径即可。
 >* [ubunntu 20.04 mendeley的安装与卸载](https://blog.csdn.net/qq_33804792/article/details/117708336)
->* docker, [安装与使用](https://blog.csdn.net/leon_zeng0/article/details/113881191), [卸载](https://zhuanlan.zhihu.com/p/143156163)
+>* docker, [安装与使用](https://blog.csdn.net/leon_zeng0/article/details/113881191), [卸载](https://zhuanlan.zhihu.com/p/143156163)。 [docker使用教程-菜鸟](https://www.runoob.com/docker/docker-container-usage.html)。[docker生成Ubuntu16.04容器-安装ROSkinetic](https://blog.csdn.net/u010904547/article/details/108375005)
