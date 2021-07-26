@@ -1,5 +1,26 @@
+/**
+ * @file main.cpp
+ * @author Jian Huang (1479748954@qq.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-07-26
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <iostream>
 #include <math.h>
+
+/**
+ * @brief 
+ * 
+ * @param a 
+ * @param b 
+ * @return int 
+ */
+int add(int a, int b){
+    return a+b;
+}
 
 int main() {
     int xx = 10;
