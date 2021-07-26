@@ -1,0 +1,113 @@
+{
+    // Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "nameyouibot": {
+        "prefix": "nameyouibot",
+        "body": [
+            "namespace youibot",
+            "{",
+            "$1",
+            "}  // namespace youibot",
+        ],
+        "description": "namespace youibot"
+    },
+    "PeripateticWind": {
+        "prefix": "PeripateticWind",
+        "body": [
+            "// PeripateticWind: begin",
+            "",
+            "// PeripateticWind: end",
+        ],
+        "description": "user PeripateticWind custom comment mark for code blocks"
+    },
+    "New header file": {
+        "prefix": "cheader",
+        "body": [
+            "#ifndef __${1:modulename}_${2:filename}_H__",
+            "#define __${1:modulename}_${2:filename}_H__",
+            "",
+            "$0",
+            "#endif  // !__${1:modulename}_${2:filename}__"
+        ],
+        "description": "new cpp file template"
+    },
+    "New cpp file": {
+        "prefix": "c++",
+        "body": [
+            "// STL",
+            "#include <iostream>",
+            "#include <algorithm>",
+            "",
+            "int main(int argc, char** argv)",
+            "{",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "new cpp file template"
+    },
+    "custom for": {
+        "prefix": "for",
+        "body": [
+            "for (${1:size_t} ${2:i} = 0; ${2:i} < ${3:count}; ${4:++${2:i}})",
+            "{",
+            "\t${5:/* code */}",
+            "}"
+        ],
+        "description": "custom for loop"
+    },
+    "algorithm foreach": {
+        "prefix": "foreach",
+        "body": [
+            "std::for_each(${1:vector}.begin(), ${1}.end(), [&](const ${2:double}& d) { ${3:std::cout << d << std::endl}; });",
+        ],
+        "description": "algorithm foreach"
+    },
+    // some snippets for log system
+    "new Glog object": {
+        "prefix": "glog",
+        "body": [
+            "Glogger logger(\"${1:packageName}\");  // initialize log system",
+        ],
+        "description": "glog object initialize"
+    },
+    "log info": {
+        "prefix": "loginfo",
+        "body": [
+            "LOG_INFO << \"${1:loginfo}:\" << ${2:variable};",
+        ],
+        "description": "glog info level log"
+    },
+    "log warning": {
+        "prefix": "logwarn",
+        "body": [
+            "LOG_WARNING << \"${1:logwarning}:\" << ${2:variable};",
+        ],
+        "description": "glog warning level log"
+    },
+    "log error": {
+        "prefix": "logerror",
+        "body": [
+            "LOG_ERROR << \"${1:logerror}:\" << ${2:variable};",
+        ],
+        "description": "glog error level log"
+    },
+    "log fatal": {
+        "prefix": "logfatal",
+        "body": [
+            "LOG_FATAL << \"${1:logfatal}:\" << ${2:variable};",
+        ],
+        "description": "glog fatal level log"
+    },
+}
