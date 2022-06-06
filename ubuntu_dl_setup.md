@@ -170,6 +170,8 @@ sudo reboot
     sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
     sudo chmod a+r /usr/local/cuda/include/cudnn.h
     sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+    sudo cp cuda/include/cudnn_version.h /usr/local/cuda/include/ #对于v7以后，否则编译报错
+    sudo chmod a+r /usr/local/cuda/include/cudnn_version.h  #对于v7以后，否则编译报错
     ```
 
 * 测试（即查看cudnn的版本）
@@ -230,3 +232,13 @@ sudo reboot
     在Python中import tensorflow; 对于1.14版本，再测试slim = tensorflow.contrib.slim
 
 * python通过requirement文件安装环境，[链接](https://zhuanlan.zhihu.com/p/69058584)
+
+## 4. 带CUDA加速的OpenCV
+
+* 下载[opencv](https://opencv.org/releases/)和[opencv_contrib](https://github.com/opencv/opencv_contrib/releases)源码，使用cmake安装。opencv和opencv_contrib的版本要一致
+* `mkdir build && cd build`
+* cmake编译指令：`cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/jian/Libs/opencv/opencv-3.4.14/install -D WITH_TBB=OFF -D WITH_IPP=OFF -D WITH_1394=OFF -D BUILD_WITH_DEBUG_INFO=OFF -D BUILD_DOCS=OFF -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D WITH_QT=OFF -D WITH_GTK=ON -D WITH_OPENGL=ON -D OPENCV_EXTRA_MODULES_PATH=/home/jian/Downloads/opencv_contrib-3.4.14/modules -D WITH_V4L=ON  -D WITH_FFMPEG=ON -D WITH_XINE=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D OPENCV_GENERATE_PKGCONFIG=ON -D WITH_CUDA=ON -D CUDA_ARCH_BIN="8.6" -D CUDA_ARCH_PTX="" -D BUILD_opencv_cudacodec=OFF ../`
+* 注意上述指令要根据具体情况修改三处地方：
+    * `/home/jian/Libs/opencv/opencv-3.4.14/install`是指定安装位置，最好都装在自行建立的Libs中
+    * `/home/jian/Downloads/opencv_contrib-3.4.14/modules`是opencv_contrib的位置
+    * `CUDA_ARCH_BIN="8.6"`是GPU的算力， [查询方法](https://blog.csdn.net/CSS360/article/details/109696878)
