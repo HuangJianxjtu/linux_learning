@@ -68,6 +68,11 @@ git clone https://gitee.com/pocmon/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-m
 ## 设置git
 参考廖雪峰的[网站](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)
 
+## Latex环境
+>* `sudo apt-get install texlive-full`
+>* `sudo apt-get install texstudio`
+>* [参考](https://blog.csdn.net/qq_41814939/article/details/82288145)，可以参考设置XeLaTeX编译引擎和中文支持包
+
 ## 日常工具
 >* 下载工具transmission, ubuntu20.04自带
 >* 媒体播放器：Ubuntu自带或VLC
