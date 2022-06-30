@@ -24,4 +24,11 @@
 * 所需插件：C/C++
 * 需要在.vscode文件夹下生成**正确的**c_cpp_properties.json, 才能实现C++代码提示、补全、变量查找等功能。
 * **生成默认c_cpp_properties.json文件的方法**：在vscode命令面板中找到`C/C++: Edit configurations (UI)`. 此时其中的includePath只有${default}，即**用户在全局settings.json定义的C_Cpp.default.includePath路径**。根据需要稍微修改c_cpp_properties.json，参考**测试用例**
-* **在全局settings.json定义的C_Cpp.default.includePath路径**：C_Cpp.default.compilerPath和C_Cpp.default.includePath.  [参考：在全局设置中设定c++默认头文件，免得每个工程配置一遍](https://blog.csdn.net/wbvalid/article/details/115001149)
+* **在全局settings.json定义的C_Cpp.default.includePath路径**：C_Cpp.default.compilerPath和C_Cpp.default.includePath.  [参考：在全局设置中设定c++默认头文件，免得每个工程配置一遍](https://blog.csdn.net/wbvalid/article/details/115001149). 常用的includePath如下:
+ ```json
+    "${workspaceFolder}/**",      //当前工作空间下头文件
+    "usr/include/**",             //系统默认c++头文件，如标准库iostream
+    "/usr/local/include/**"       //用户自己安装库的头文件,如opencv
+    "/opt/ros/noetic/include/**"  //ROS自带的头文件(ubuntu20.04)
+    "Path_to_ROS_Workspace/devel/include/**"    //自定义的ROS包
+  ```

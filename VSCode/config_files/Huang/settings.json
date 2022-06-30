@@ -1,0 +1,101 @@
+{
+    "files.autoSaveDelay": 100,
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": false,    // 关闭右边的小地图，太烦人了
+    "terminal.integrated.inheritEnv": false,
+    "explorer.confirmDelete": false,
+    "python.pythonPath": "/usr/bin/python",
+    "cmake.configureOnOpen": false,
+    "cSpell.userWords": [
+        "msgs",
+        "rospy"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "tabnine.experimentalAutoImports": true,
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "remote.SSH.defaultForwardedPorts": [
+    
+    ],
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "NOTE"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "git.autofetch": true,
+    // "python.defaultInterpreterPath": "/usr/bin/python",
+    "files.exclude": {
+        "*.metadata": true,
+        "**/[Aa]nimation": true,
+        "**/[Mm]aterials": true,
+        "**/[Pp]ackages": true,
+        "**/[Pp]lugins": true,
+        "**/[Ss]cenes": true,
+        "**/[Tt]extures": true,
+        "**/*.anim": true,
+        "**/*.controller": true,
+        "**/*.csproj": true,
+        "**/*.d.ts": true,
+        "**/*.fnt": true,
+        "**/*.meta": true,
+        "**/*.prefab": true,
+        "**/*.pyc": true,
+        "**/*.sln": true,
+        "**/audio": true,
+        "**/library": true,
+        "**/Logs": true,
+        "**/temp": true,
+        "**/video": true
+    },
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.showStartPage": false,
+    "doxdocgen.generic.authorEmail": "1479748954@qq.com",
+    "doxdocgen.generic.authorName": "Jian Huang",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Default Dark+",
+    "window.zoomLevel": 1,
+
+    // 用于C++代码自动补全、提示、变量查找等
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",   //当前工作空间下头文件
+        "usr/include/**",      //系统默认c++头文件，如标准库iostream
+        "/usr/local/include/**" //用户自己安装库的头文件,如opencv
+        //"/opt/ros/noetic/include/**", ROS头文件(ubuntu20.04)
+    ],
+    
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    // c++代码自动格式化配置
+    "C_Cpp.clang_format_style": "file",
+    "clangd.path": "/home/jian/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/14.0.3/clangd_14.0.3/bin/clangd",
+    "C_Cpp.autocompleteAddParentheses": true,
+
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.default.cppStandard": "c++11",
+    "settingsSync.ignoredSettings": [
+        "-C_Cpp.default.includePath"
+    ]
+}
