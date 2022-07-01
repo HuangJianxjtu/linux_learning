@@ -8,9 +8,11 @@
 
 主要分为全局配置和工作空间配置。全局配置存储在`.config/Code/User/settings.json`， 该文件会被自动同步到VSCode服务器。工作空间配置存储在每个工作空间中的.vscode文件夹中，这个文件夹不会自动同步。
 
+>* 如何同步VSCode配置：[VSCode同步设置插件-Settings Sync](https://blog.csdn.net/l1724979351/article/details/119039113)
+
 ## 2.工作空间配置
 
-主要包含一下三个文件。只要配置c_cpp_properties.json即可，然后用CMake插件调试（Crtl + F5）。 不用去配置繁琐的launch.json和task.json. [参考1](https://www.guyuehome.com/20977)
+主要包含一下三个文件。只要配置c_cpp_properties.json即可，然后用CMake插件调试（Crtl + F5）。 不用去配置繁琐的launch.json和task.json. [有用的官方教程！](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/how-to.md#create-a-new-project)；[参考1](https://www.guyuehome.com/20977)
 * c_cpp_properties.json: C++配置文件
 * launch.json: 启动代码调试相关的配置文件
 * tasks.json: 自定义任务列表
