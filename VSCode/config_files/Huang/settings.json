@@ -95,7 +95,14 @@
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "C_Cpp.default.cppStandard": "c++11",
-    "settingsSync.ignoredSettings": [
-        "-C_Cpp.default.includePath"
-    ]
+    /**
+     * @brief: plugin sync settings
+     *
+     **/
+    "sync.gist": "7db851fa79bd363d045c256f72158915",
+    "sync.autoUpload": false,
+    "sync.forceUpload": false,
+    "sync.autoDownload": false,
+    "sync.removeExtensions": false,
+    "sync.syncExtensions": false
 }
