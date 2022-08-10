@@ -1,4 +1,4 @@
-# Ubuntu20.04重装系统后的软件安装指南
+# Ubuntu20.04配置笔记
 
 ## 如何解决Ubuntu20.04与Windows系统时间不同步
 
@@ -21,10 +21,9 @@
 按照sougou for linux的官方教程安装即可。如果系统找不到搜狗输入法，需要在“Input Method”中添加。
 
 ## 科学上网
->* 使用.deb文件安装qv2ray，[官网](https://github.com/Qv2ray/Qv2ray)。并设置开机自动重启、自动连接；开机自动重启可能失效，此时需要手动添加到startup application中
->* 从github下载v2ray core到qv2ray的默认路径，[官网](https://github.com/v2fly/v2ray-core)。并通过检查。
+>* 下载最新版的qv2ray(2.7.0)，[链接](https://github.com/Qv2ray/Qv2ray/releases/tag/v2.7.0)。并设置开机自动重启、自动连接；开机自动重启可能失效，此时需要手动添加到startup application中
+>* 从github下载最新版的xray core到qv2ray的默认路径，[链接](https://github.com/XTLS/Xray-core/releases/tag/v1.5.5)。并通过检查。
 >* 添加自己的翻墙服务器
->* 有时候会出现无法翻墙的情况(outbound traffic), 大多数是qv2ray版本不对，目前测试成功的版本是2.6.3
 
 ## Google Chrome
 
@@ -73,13 +72,24 @@ git clone https://gitee.com/pocmon/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-m
 >* `sudo apt-get install texstudio`
 >* [参考](https://blog.csdn.net/qq_41814939/article/details/82288145)，可以参考设置XeLaTeX编译引擎和中文支持包
 
+## ROS 1.0
+
+[清华源_Ubuntu20.04下安装ROS](https://blog.csdn.net/weixin_42525601/article/details/112198438), [科大源_Ubuntu20.04下安装ROS](https://icode.best/i/55863549473115)
+
+## VScode
+
+登录账号后，自动同步配置。TODO: 整理一下如何用`Setting Sync`手动同步
+
+## Clion & Pycharm
+
+>* CLion和PyCharm安装,[参考](https://blog.csdn.net/feimeng116/article/details/105898892)；注意安装路径, **统一安装在`~/bin_hj`下**; 
+>* 使用CLion&Pycharm进行ROS编程，[参考](https://github.com/HuangJianxjtu/robotics_coding_learning/blob/master/ROS/env_setup/ros_IDE_env_setup.md)
+>* 可能会遇到pycharm无法导入rospy，[参考](https://blog.csdn.net/weixin_44481159/article/details/112583202)
+
 ## 日常工具
->* 下载工具transmission, ubuntu20.04自带
+>* 下载工具transmission (ubuntu20.04自带)
 >* 媒体播放器：Ubuntu自带或VLC
->* VScode:登录账号后，自动同步配置
->* [ros清华源_Ubuntu20.04下安装ROS](https://blog.csdn.net/weixin_42525601/article/details/112198438)
->* 安装CLion, 注意安装路径,[参考](https://blog.csdn.net/feimeng116/article/details/105898892); 使用CLion进行ROS编程，[参考](https://github.com/HuangJianxjtu/ros_learning/blob/master/env_setup/ros_IDE_env_setup.md)
->* 安装PyCharm, 注意安装路径，参考CLion的安装；使用PyCharm进行ROS编程也参考CLion中的教程。但要注意解决[解决pycharm无法导入rospy](https://blog.csdn.net/weixin_44481159/article/details/112583202)，这篇文章有一处小毛病，就是noetic默认使用python3编程，找到相应文件路径即可。
+
 >* [ubunntu 20.04 mendeley的安装与卸载](https://blog.csdn.net/qq_33804792/article/details/117708336)
 >* docker, [安装与使用](https://blog.csdn.net/leon_zeng0/article/details/113881191), [卸载](https://zhuanlan.zhihu.com/p/143156163)。 [docker使用教程-菜鸟](https://www.runoob.com/docker/docker-container-usage.html)。[docker生成Ubuntu16.04容器-安装ROSkinetic](https://blog.csdn.net/u010904547/article/details/108375005)
 
