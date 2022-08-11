@@ -86,6 +86,17 @@ git clone https://gitee.com/pocmon/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-m
 >* 使用CLion&Pycharm进行ROS编程，[参考](https://github.com/HuangJianxjtu/robotics_coding_learning/blob/master/ROS/env_setup/ros_IDE_env_setup.md)
 >* 可能会遇到pycharm无法导入rospy，[参考](https://blog.csdn.net/weixin_44481159/article/details/112583202)
 
+##  文献管理工具Zotero
+
+>* 下载链接[Zotero 6 for Linux](https://www.zotero.org/download/)，下载得到一个压缩包
+>* 解压到一个能长期保存的文件夹，我的是: `~/bin_hj`。可以直接运行该目录下的`zotero`文件，但不方便
+>* 建立桌面快捷方式(**在Zotero_linux-x86_64路径下运行**)：
+```bash
+./set_launcher_icon
+ln -s /PATH_TO_Zotero/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applications/zotero.desktop  #使用绝对路径创建软链接，需要修改第一个文件路径
+```
+>* 之后zotero的配置参考[zotero_坚果云_setup](zotero_jianguoyun_setup.md)
+
 ## 日常工具
 >* 下载工具transmission (ubuntu20.04自带)
 >* 媒体播放器：Ubuntu自带或VLC
