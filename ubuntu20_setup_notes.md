@@ -100,7 +100,7 @@ ln -s /PATH_TO_Zotero/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applicat
 
 ## 日常工具
 >* 下载工具transmission (ubuntu20.04自带)
->* 媒体播放器：Ubuntu自带或VLC
+>* 媒体播放器：VLC，安装方法：`sudo apt install vlc`
 
 >* [ubunntu 20.04 mendeley的安装与卸载](https://blog.csdn.net/qq_33804792/article/details/117708336)
 >* docker, [安装与使用](https://blog.csdn.net/leon_zeng0/article/details/113881191), [卸载](https://zhuanlan.zhihu.com/p/143156163)。 [docker使用教程-菜鸟](https://www.runoob.com/docker/docker-container-usage.html)。[docker生成Ubuntu16.04容器-安装ROSkinetic](https://blog.csdn.net/u010904547/article/details/108375005)
