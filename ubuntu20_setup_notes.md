@@ -98,11 +98,34 @@ ln -s /PATH_TO_Zotero/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applicat
 ```
 >* 之后zotero的配置参考[zotero_坚果云_setup](zotero_jianguoyun_setup.md)
 
+## 办公--WPS
+
+>* 直接从官网下载安装包安装
+
+>* 安装Microsoft开源字体:
+
+```bash
+sudo apt update
+sudo apt install ttf-mscorefonts-installer
+```
+
+>* **解决WPS缺少字体问题：** 将WPS缺少的字体复制到 /usr/share/fonts/wps-office 目录下（字体文件已备份到硬盘，共6个文件）
+>* 生成字体的索引信息,再更新字体缓存：
+
+```bash
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache -f -v
+```
+
+>* **将Windows的字体搬到ubuntu:**
+>>* 拷贝windows字体，[方法](https://zhuanlan.zhihu.com/p/96561464) (已备份到硬盘，共567个文件)
+>>* 在 /usr/share/fonts/ 中新建文件夹 fonts_from_windows. 再把567个字体文件copy到此文件夹下。重复上一步的字体更新过程。重启电脑。这样就能再ubuntu下完成80%左右的办公任务了！！！
+
 ## 日常工具
 >* 下载工具transmission (ubuntu20.04自带)
 >* 媒体播放器：VLC，安装方法：`sudo apt install vlc`
 
->* [ubunntu 20.04 mendeley的安装与卸载](https://blog.csdn.net/qq_33804792/article/details/117708336)
 >* docker, [安装与使用](https://blog.csdn.net/leon_zeng0/article/details/113881191), [卸载](https://zhuanlan.zhihu.com/p/143156163)。 [docker使用教程-菜鸟](https://www.runoob.com/docker/docker-container-usage.html)。[docker生成Ubuntu16.04容器-安装ROSkinetic](https://blog.csdn.net/u010904547/article/details/108375005)
 
 ## TODO: 设置局域网内网络共享文件夹
