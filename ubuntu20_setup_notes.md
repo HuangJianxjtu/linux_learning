@@ -22,9 +22,8 @@
 按照sougou for linux的官方教程安装即可。如果系统找不到搜狗输入法，需要在“Input Method”中添加。
 
 ## 科学上网
->* 下载最新版的qv2ray(2.7.0)，[链接](https://github.com/Qv2ray/Qv2ray/releases/tag/v2.7.0)。并设置开机自动重启、自动连接；开机自动重启可能失效，此时需要手动添加到startup application中
->* 从github下载最新版的xray core到qv2ray的默认路径，[链接](https://github.com/XTLS/Xray-core/releases/tag/v1.5.5)。并通过检查。
->* 添加自己的翻墙服务器
+>* 安装教程[V2rayA_Introduction](https://v2raya.org/docs/prologue/introduction/)安装v2ray-core和v2rayA，且查看**快速上手**教程
+>* 添加自己的科学服务器
 
 ## Google Chrome
 
