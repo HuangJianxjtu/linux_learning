@@ -78,7 +78,7 @@ xdg-open命令会根据系统的默认打开方式打开一个文件，比如图
 
 `sudo apt install /path/to/package/name.deb`
 
-## 4. Ubuntu16.04的默认截图方式
+## 4. Ubuntu16.04/20.04的默认截图方式
 
 >* 对整个屏幕截图： PrintScreen
 >* 对活动窗口截图： Alt + PrintScreen
@@ -135,4 +135,19 @@ nohup [YOUR_COMMAND] &
 NOTE: nohup命令执行后，不要直接关闭终端，使用exit命令退出会话.否则会出现nohup不起作用的情况！
 
 [如何终止正在后台运行的程序](https://blog.csdn.net/qq_29663071/article/details/81030396)
+
+## 8. du和df命令
+
+>* du是disk usage的缩写, 用于显示目录或文件的大小。使用方法：
+```bash
+du -h -d 1 [目录或文件]
+# -h --human-readable
+# -d --max-depth, 默认是1
+# 默认显示文件夹大小，如要显示到文件大小，将-d1换成-a
+```
+>* df是disk free的缩写，用于显示Linux系统上文件系统磁盘使用情况，**磁盘满时很有用！**，用法：
+```bash
+df -H
+```
+
 
