@@ -16,7 +16,7 @@
 在“Software & Updates”的additional drivers安装即可，使用tested版本。安装后可能需要重启
 
 >* 解决关机慢、有光标闪烁问题，[参考](https://blog.csdn.net/X_T_S/article/details/110144658)。似乎是因为英伟达显卡驱动引起的
->* **解决ubuntu搭配4k屏幕使用过程中的个别软件（搜狗输入法，qv2ray）显示过小问题:** 即设置4k分辨率150%缩放后，一些软件显示过小。[参考](https://unix.stackexchange.com/questions/433385/scaling-hidpi-issue-for-qt5-applications-under-gnome), 不知道还复现。。。。
+>* **解决ubuntu搭配4k屏幕使用过程中的个别软件（搜狗输入法，qv2ray）显示过小问题:** 即设置4k分辨率150%缩放后，一些软件显示过小。[参考](https://unix.stackexchange.com/questions/433385/scaling-hidpi-issue-for-qt5-applications-under-gnome), 不知道还能不能复现。。。。
 
 ## 中文输入法
 按照sougou for linux的官方教程安装即可。如果系统找不到搜狗输入法，需要在“Input Method”中添加。
@@ -71,6 +71,7 @@ git clone https://gitee.com/pocmon/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-m
 >* `sudo apt-get install texlive-full`
 >* `sudo apt-get install texstudio`
 >* [参考](https://blog.csdn.net/qq_41814939/article/details/82288145)，可以参考设置XeLaTeX编译引擎和中文支持包
+* 安装数学公式截图转Latex工具--Mathpix, [教程](https://mathpix.com/docs/snip/linux-overview). （用Terminal方式安装，下载到`~/bin_hj`下，命令行启动；使用QQ邮箱注册账号）
 
 ## ROS 1.0
 
