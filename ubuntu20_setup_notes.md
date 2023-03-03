@@ -79,7 +79,7 @@ git clone https://gitee.com/pocmon/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-m
 
 ## VScode
 
-登录账号后，自动同步配置。TODO: 整理一下如何用`Setting Sync`手动同步
+登录账号后，自动同步配置。TODO: 整理一下如何用`Setting Sync`手动同步. VScode的设置请查看[教程](./VSCode/vscode_setup.md)
 
 ## Clion & Pycharm
 

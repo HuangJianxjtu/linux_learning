@@ -34,3 +34,6 @@
     "/opt/ros/noetic/include/**"  //ROS自带的头文件(ubuntu20.04)
     "Path_to_ROS_Workspace/devel/include/**"    //自定义的ROS包
   ```
+## 4. 插件
+
+>* [sftp](https://zhuanlan.zhihu.com/p/73218983)
