@@ -126,9 +126,9 @@ sudo reboot
     在~/.bashrc末尾添加(Tensorflow官方安装历程要求注意的是:配置PATH和LD_LIBRARY_PATH和CUDA_HOME环境变量.)：
 
     ```bash
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-    export PATH=$PATH:/usr/local/cuda/bin
-    export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+    export PATH=/usr/local/cuda/bin:$PATH
+    export CUDA_HOME=/usr/local/cuda
     ```
 
 * CUDA版本切换
